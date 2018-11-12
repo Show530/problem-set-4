@@ -67,7 +67,9 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
+  var cels= ((fahr - 32) * 5/9).toFixed(2);
+  p= document.getElementById("output4");
+  p.innerHTML= fahr + " degrees Fahrenheit equals " + cels + " degrees Celsius.";
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
