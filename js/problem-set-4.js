@@ -124,7 +124,12 @@ function centimeters() {
   let centimeters = input; // DO NOT MODIFY
   /////////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
+  var kilometers= Math.floor(centimeters/100000);
+  centimeters= centimeters % 100000;
+  var meters= Math.floor(centimeters/100);
+  centimeters= centimeters % 100;
+  p= document.getElementById("output6");
+  p.innerHTML= `Kilometers: ${kilometers}<br/>Meters: ${meters}<br/>Centimeters: ${centimeters}`;
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
