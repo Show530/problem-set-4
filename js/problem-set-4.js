@@ -186,7 +186,12 @@ function ounces() {
   let ounces = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 8 CODE HERE
+  var tons= Math.floor(ounces/32000);
+  ounces= ounces % 32000;
+  var pounds= Math.floor(ounces/16);
+  ounces= ounces % 16;
+  p= document.getElementById("output8");
+  p.innerHTML= `Tons: ${tons}<br/>Pounds: ${pounds}<br/>Ounces: ${ounces}`;
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
@@ -210,7 +215,16 @@ function money() {
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 9 CODE HERE
+  var dollars= Math.floor(pennies/100);
+  pennies= pennies % 100;
+  var quarters= Math.floor(pennies/25);
+  pennies= pennies % 25;
+  var dimes= Math.floor(pennies/10);
+  pennies= pennies % 10;
+  var nickles= Math.floor(pennies/5);
+  pennies= pennies % 5;
+  p= document.getElementById("output9");
+  p.innerHTML= `Dollars: ${dollars}<br/>Quarters: ${quarters}<br/>Dimes: ${dimes}<br/>Nickels: ${nickles}<br/>Pennies: ${pennies}`;
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -234,7 +248,17 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 10 CODE HERE
+  var quarters= Math.floor(amount/0.25);
+  amount= amount % 0.25;
+  var dimes= Math.floor(amount/0.10);
+  amount= amount % 0.10;
+  var nickels= Math.floor(amount/0.5);
+  amount= amount % 0.5;
+  var pennies= Math.floor(amount/0.1);
+  amount= 0;
+  amount= quarters + dimes + nickels + pennies;
+  p= document.getElementById("output10");
+  p.innerHTML= `${amount} coins.`;
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
